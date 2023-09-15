@@ -7,11 +7,10 @@
 #include <stdlib.h>
 #include <string>
 #include <algorithm>
+#include "function.h"
 
 using namespace std::chrono;
 
-const int n = 100000;
-const int m = 100000;
 
 struct table {
     std::string name;
@@ -20,101 +19,7 @@ struct table {
     double time_find;
 };
 
-double push_time(std::list<int>& q, int a[n]) {
-    auto t_1 = steady_clock::now();
-    for (int i = 0; i < n; i++) {
-        q.push_back(a[i]);
-    }
-    auto t_2 = steady_clock::now();
-    q.clear();
-    return duration<double>(t_2 - t_1).count();
-}
 
-double insert_time(std::list<int>& q, int a[n]) {
-    auto t_1 = steady_clock::now();
-    for (int i = 0; i < n; i++) {
-        q.insert(q.begin(), a[i]);
-    }
-    auto t_2 = steady_clock::now();
-    q.clear();
-    return duration<double>(t_2 - t_1).count();
-}
-
-double push_time(std::vector<int>& q, int a[n]) {
-    auto t_1 = steady_clock::now();
-    for (int i = 0; i < n; i++) {
-        q.push_back(a[i]);
-    }
-    auto t_2 = steady_clock::now();
-    q.clear();
-    return duration<double>(t_2 - t_1).count();
-}
-
-double insert_time(std::vector<int>& q, int a[n]) {
-    auto t_1 = steady_clock::now();
-    for (int i = 0; i < n; i++) {
-        q.insert(q.begin(), a[i]);
-    }
-    auto t_2 = steady_clock::now();
-    q.clear();
-    return duration<double>(t_2 - t_1).count();
-}
-
-double insert_time(std::set<int>& q, int a[n]) {
-    auto t_1 = steady_clock::now();
-    for (int i = 0; i < n; i++) {
-        q.insert(a[i]);
-    }
-    auto t_2 = steady_clock::now();
-    q.clear();
-    return duration<double>(t_2 - t_1).count();
-}
-
-double insert_time(std::unordered_set<int>& q, int a[n]) {
-    auto t_1 = steady_clock::now();
-    for (int i = 0; i < n; i++) {
-        q.insert(a[i]);
-    }
-    auto t_2 = steady_clock::now();
-    q.clear();
-    return duration<double>(t_2 - t_1).count();
-}
-
-double find_time(std::list<int>& q, int poisk[m]) {
-    auto t_1 = steady_clock::now();
-    for (int i = 0; i < m; i++) {
-        std::find(q.begin(), q.end(), poisk[i]);
-    }
-    auto t_2 = steady_clock::now();
-    return duration<double>(t_2 - t_1).count();
-}
-
-double find_time(std::vector<int>& q, int poisk[m]) {
-    auto t_1 = steady_clock::now();
-    for (int i = 0; i < m; i++) {
-        std::find(q.begin(), q.end(), poisk[i]);
-    }
-    auto t_2 = steady_clock::now();
-    return duration<double>(t_2 - t_1).count();
-}
-
-double find_time(std::set<int>& q, int poisk[m]) {
-    auto t_1 = steady_clock::now();
-    for (int i = 0; i < m; i++) {
-        q.find(poisk[m]);
-    }
-    auto t_2 = steady_clock::now();
-    return duration<double>(t_2 - t_1).count();
-}
-
-double find_time(std::unordered_set<int>& q, int poisk[m]) {
-    auto t_1 = steady_clock::now();
-    for (int i = 0; i < m; i++) {
-        q.find(poisk[m]);
-    }
-    auto t_2 = steady_clock::now();
-    return duration<double>(t_2 - t_1).count();
-}
 
 int main() {
     srand(23);
