@@ -69,28 +69,28 @@ include CMakeFiles/tests.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/tests.dir/flags.make
 
-CMakeFiles/tests.dir/test.cpp.o: CMakeFiles/tests.dir/flags.make
-CMakeFiles/tests.dir/test.cpp.o: ../test.cpp
-CMakeFiles/tests.dir/test.cpp.o: CMakeFiles/tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ilya/Рабочий стол/с++/tmp/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tests.dir/test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tests.dir/test.cpp.o -MF CMakeFiles/tests.dir/test.cpp.o.d -o CMakeFiles/tests.dir/test.cpp.o -c "/home/ilya/Рабочий стол/с++/test.cpp"
+CMakeFiles/tests.dir/test2.cpp.o: CMakeFiles/tests.dir/flags.make
+CMakeFiles/tests.dir/test2.cpp.o: ../test2.cpp
+CMakeFiles/tests.dir/test2.cpp.o: CMakeFiles/tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ilya/Рабочий стол/с++/tmp/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tests.dir/test2.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tests.dir/test2.cpp.o -MF CMakeFiles/tests.dir/test2.cpp.o.d -o CMakeFiles/tests.dir/test2.cpp.o -c "/home/ilya/Рабочий стол/с++/test2.cpp"
 
-CMakeFiles/tests.dir/test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ilya/Рабочий стол/с++/test.cpp" > CMakeFiles/tests.dir/test.cpp.i
+CMakeFiles/tests.dir/test2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/test2.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ilya/Рабочий стол/с++/test2.cpp" > CMakeFiles/tests.dir/test2.cpp.i
 
-CMakeFiles/tests.dir/test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ilya/Рабочий стол/с++/test.cpp" -o CMakeFiles/tests.dir/test.cpp.s
+CMakeFiles/tests.dir/test2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/test2.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ilya/Рабочий стол/с++/test2.cpp" -o CMakeFiles/tests.dir/test2.cpp.s
 
 # Object files for target tests
 tests_OBJECTS = \
-"CMakeFiles/tests.dir/test.cpp.o"
+"CMakeFiles/tests.dir/test2.cpp.o"
 
 # External object files for target tests
 tests_EXTERNAL_OBJECTS =
 
-tests: CMakeFiles/tests.dir/test.cpp.o
+tests: CMakeFiles/tests.dir/test2.cpp.o
 tests: CMakeFiles/tests.dir/build.make
 tests: /usr/local/lib/libCatch2Main.a
 tests: /usr/local/lib/libCatch2.a

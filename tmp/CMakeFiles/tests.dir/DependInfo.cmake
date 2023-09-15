@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ilya/Рабочий стол/с++/test.cpp" "CMakeFiles/tests.dir/test.cpp.o" "gcc" "CMakeFiles/tests.dir/test.cpp.o.d"
+  "/home/ilya/Рабочий стол/с++/test2.cpp" "CMakeFiles/tests.dir/test2.cpp.o" "gcc" "CMakeFiles/tests.dir/test2.cpp.o.d"
   )
 
 # Targets to which this target links.

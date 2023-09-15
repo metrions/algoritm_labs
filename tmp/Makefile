@@ -503,29 +503,29 @@ ContinuousSubmit/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
 .PHONY : ContinuousSubmit/fast
 
-test.o: test.cpp.o
-.PHONY : test.o
+test2.o: test2.cpp.o
+.PHONY : test2.o
 
 # target to build an object file
-test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/test.cpp.o
-.PHONY : test.cpp.o
+test2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/test2.cpp.o
+.PHONY : test2.cpp.o
 
-test.i: test.cpp.i
-.PHONY : test.i
+test2.i: test2.cpp.i
+.PHONY : test2.i
 
 # target to preprocess a source file
-test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/test.cpp.i
-.PHONY : test.cpp.i
+test2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/test2.cpp.i
+.PHONY : test2.cpp.i
 
-test.s: test.cpp.s
-.PHONY : test.s
+test2.s: test2.cpp.s
+.PHONY : test2.s
 
 # target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/test.cpp.s
-.PHONY : test.cpp.s
+test2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/test2.cpp.s
+.PHONY : test2.cpp.s
 
 # Help Target
 help:
@@ -565,9 +565,9 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... tests"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
+	@echo "... test2.o"
+	@echo "... test2.i"
+	@echo "... test2.s"
 .PHONY : help
 
 
