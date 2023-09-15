@@ -1,34 +1,59 @@
 #include <iostream>
-#include <algorithm>
-#include <string>
-#include <set>
 #include <vector>
+#include <list>
+#include <set>
+#include <unordered_set>
+#include <chrono>
+#include <stdlib.h>
+#include <string>
+#include <algorithm>
 #include "function_2.h"
 
 using namespace std;
 
+using namespace std::chrono;
 
-void print_set(set <int> &t){
-    for (auto i : t) cout << i << " ";
-    cout << endl;
-}
+const int n = 100000;
+
+struct table {
+    std::string name;
+    double time;
+};
 
 
 int main(){
-    srand(38);
-    int a[1000];
-    vector<int> test_1{1, 2, 3, 22, 5, 33, 7, 42, 42, 10, 11, 12, 13, 14, 14, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38};
-    vector<int> test_2{1, 1, 1, 1, 1, 1, 1};
-    vector<int> test_3{1, 1, 1, 1, 1, 1, 1};
-    for (int i = 0; i < 1000; i++) {
-        a[i] = (int)rand() % 1000;
+    srand(45);
+    vector <int> a(n);
+    table answers[4];
+    for (int i = 0; i < n; i++) {
+        a[i] = (int)rand() % 10000000;
     }
-    cout << has_dublicates_slow(test_1) << endl;
-    set <int> q = get_dublicates_slow(test_1);
-    cout << "1 test: set ";
-    print_set(q);
-    cout << has_dublicates_slow(test_2) << endl;
-    q = get_dublicates_slow(test_2);
-    cout << "2 test: set ";
-    print_set(q);
+    auto t_1 = steady_clock::now();
+    has_duplicates(a);
+    auto t_2 = steady_clock::now();
+    answers[0].name = "Быстрый has_duplicates ";
+    answers[0].time = duration<double>(t_2 - t_1).count();
+
+    t_1 = steady_clock::now();
+    has_duplicates_slow(a);
+    t_2 = steady_clock::now();
+    answers[1].name = "Медленный has_duplicates ";
+    answers[1].time = duration<double>(t_2 - t_1).count();
+
+    t_1 = steady_clock::now();
+    get_duplicates(a);
+    t_2 = steady_clock::now();
+    answers[2].name = "Быстрый get_duplicates ";
+    answers[2].time = duration<double>(t_2 - t_1).count();
+
+    t_1 = steady_clock::now();
+    get_duplicates_slow(a);
+    t_2 = steady_clock::now();
+    answers[3].name = "Медленный get_duplicates ";
+    answers[3].time = duration<double>(t_2 - t_1).count();
+
+    cout << answers[0].name << answers[0].time << endl;
+    cout << answers[1].name << answers[1].time << endl;
+    cout << answers[2].name << answers[2].time << endl;
+    cout << answers[3].name << answers[3].time << endl;
 }
