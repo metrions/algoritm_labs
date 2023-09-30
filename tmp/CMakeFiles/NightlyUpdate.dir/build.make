@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/ilya/Рабочий стол/с++"
+CMAKE_SOURCE_DIR = "/home/ilya/Рабочий стол/algoritm/с++"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/ilya/Рабочий стол/с++/tmp"
+CMAKE_BINARY_DIR = "/home/ilya/Рабочий стол/algoritm/с++/tmp"
 
 # Utility rule file for NightlyUpdate.
 
@@ -82,6 +82,6 @@ CMakeFiles/NightlyUpdate.dir/clean:
 .PHONY : CMakeFiles/NightlyUpdate.dir/clean
 
 CMakeFiles/NightlyUpdate.dir/depend:
-	cd "/home/ilya/Рабочий стол/с++/tmp" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/ilya/Рабочий стол/с++" "/home/ilya/Рабочий стол/с++" "/home/ilya/Рабочий стол/с++/tmp" "/home/ilya/Рабочий стол/с++/tmp" "/home/ilya/Рабочий стол/с++/tmp/CMakeFiles/NightlyUpdate.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/ilya/Рабочий стол/algoritm/с++/tmp" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/ilya/Рабочий стол/algoritm/с++" "/home/ilya/Рабочий стол/algoritm/с++" "/home/ilya/Рабочий стол/algoritm/с++/tmp" "/home/ilya/Рабочий стол/algoritm/с++/tmp" "/home/ilya/Рабочий стол/algoritm/с++/tmp/CMakeFiles/NightlyUpdate.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/NightlyUpdate.dir/depend
 

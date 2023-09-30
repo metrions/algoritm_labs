@@ -1,7 +1,7 @@
 CMakeFiles/tests.dir/test2.cpp.o: \
- /home/ilya/Рабочий\ стол/с++/test2.cpp \
+ /home/ilya/Рабочий\ стол/algoritm/с++/test2.cpp \
  /usr/include/stdc-predef.h \
- /home/ilya/Рабочий\ стол/с++/function_2.h \
+ /home/ilya/Рабочий\ стол/algoritm/с++/function_2.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <string>
 #include <algorithm>
+#pragma once
 
 
 using namespace std::chrono;
@@ -75,38 +76,68 @@ double insert_time(std::unordered_set<int>& q, int a[n]) {
     return duration<double>(t_2 - t_1).count();
 }
 
-double find_time(std::list<int>& q, int poisk[m]) {
+double find_time(const std::list<int>& q, int poisk[m]) {
     auto t_1 = steady_clock::now();
+    int k = 0;
     for (int i = 0; i < m; i++) {
-        std::find(q.begin(), q.end(), poisk[i]);
+        if (std::find(q.begin(), q.end(), poisk[i]) != q.end()){
+            k++;
+        }
+        else{
+            k--;
+        }
     }
     auto t_2 = steady_clock::now();
+    std::cout << k << " ";
     return duration<double>(t_2 - t_1).count();
 }
 
-double find_time(std::vector<int>& q, int poisk[m]) {
+double find_time(const std::vector<int>& q, int poisk[m]) {
     auto t_1 = steady_clock::now();
+    int  k = 0;
     for (int i = 0; i < m; i++) {
-        std::find(q.begin(), q.end(), poisk[i]);
+        auto it = std::find(q.begin(), q.end(), poisk[i]);
+        if (it != q.end()){
+            k++;
+        }
+        else{
+            k--;
+        }
     }
     auto t_2 = steady_clock::now();
+    std::cout << k << " ";
     return duration<double>(t_2 - t_1).count();
 }
 
-double find_time(std::set<int>& q, int poisk[m]) {
+double find_time(const std::set<int>& q, int poisk[m]) {
     auto t_1 = steady_clock::now();
+    int k = 0;
     for (int i = 0; i < m; i++) {
-        q.find(poisk[m]);
+        if (q.find(poisk[i]) != q.end()){
+            k++;
+        }
+        else{
+            k--;
+        }
     }
     auto t_2 = steady_clock::now();
+    std::cout << k << " ";
     return duration<double>(t_2 - t_1).count();
 }
 
-double find_time(std::unordered_set<int>& q, int poisk[m]) {
+double find_time(const std::unordered_set<int>& q, int poisk[m]) {
     auto t_1 = steady_clock::now();
+    int k = 0;
     for (int i = 0; i < m; i++) {
-        q.find(poisk[m]);
+        if (q.find(poisk[i]) != q.end()){
+            k++;
+        }
+        else{
+            k--;
+        }
     }
     auto t_2 = steady_clock::now();
+    std::cout << k << " ";
+    //std::cout << duration<double>(t_2 - t_1).count() << k;
     return duration<double>(t_2 - t_1).count();
 }

@@ -1,6 +1,7 @@
 #include "function_2.h"
 #include <catch2/catch_test_macros.hpp>
 #include <catch2/benchmark/catch_benchmark.hpp>
+#define CATCH_CONFIG_MAIN
 #include <algorithm>
 #include <iostream>
 
